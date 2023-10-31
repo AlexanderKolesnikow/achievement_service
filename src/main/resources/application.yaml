@@ -24,6 +24,16 @@ spring:
       channel:
         achievement: achievement_channel
         follower: follower_channel
+        recommendation: recommendation_channel
+
+  async:
+    core-size: 5
+    max-size: 10
+    queue-capacity: 100
+    thread-name-prefix: taskExecutor-
+
+  config:
+    import: classpath:achievement/achievement.yaml
 
 server:
   port: 8085
